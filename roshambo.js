@@ -72,9 +72,13 @@ function getHumanChoice() {
         if (userInput != "rock" || userInput != "paper" || userInput != "scissors") {
             console.log("Error! Please type a valid input");
         } else {
-            validChoice = truel
+            validChoice = true;
         }
     }
 
     return userInput;
 }
+
+
+/* MAIN */
+
