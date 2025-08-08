@@ -21,9 +21,9 @@ let humanScore = 0;
 let computerScore = 0;
 let round = 0;
 const winMap = new Map();
-winMap["rock"] = "scissors";
-winMap["paper"] = "rock";
-winMap["scissors"] = "paper";
+winMap.set("rock", "scissors");
+winMap.set("paper", "rock");
+winMap.set("scissors", "paper");
 
 /* 
  * getComputerChoice
@@ -111,8 +111,7 @@ function playRound(humanChoice, computerChoice) {
 
     console.log();
     console.log("Current score:");
-    console.log("______________")
-    console.log("User: " + humanScore + '\t' + "Computer: " + computerScore);
+    console.log("User: " + humanScore + '\t\t' + "Computer: " + computerScore);
     console.log();
 }
 
