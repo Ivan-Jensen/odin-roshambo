@@ -43,3 +43,26 @@ function getComputerChoice() {
         return "scissors";
     }
 }
+
+
+/*
+ * getHumanChoice
+ * 
+ * This function prompts the user to make a choice between rock, paper,
+ * and scissors for the game. If the user doesn't make a valid choice
+ * then the function will keep asking the user to make a valid choice
+ * until they make a valid choice.
+ * 
+ * Parameter(s):
+ *     None
+ * 
+ * Returns:
+ *     "rock":     If the user chooses rock
+ *     "paper":    If the user chooses paper
+ *     "scissors": If the user chooses scissors
+ * 
+ */
+
+function getHumanChoice() {
+    
+}
