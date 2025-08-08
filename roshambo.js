@@ -20,11 +20,10 @@
 let humanScore = 0;
 let computerScore = 0;
 let round = 0;
-const winMap = {
-    "rock": "scissors",
-    "paper": "rock",
-    "scissors": "paper"
-};
+const winMap = new Map();
+winMap["rock"] = "scissors";
+winMap["paper"] = "rock";
+winMap["scissors"] = "paper";
 
 /* 
  * getComputerChoice
@@ -117,3 +116,25 @@ function playRound(humanChoice, computerChoice) {
     console.log();
 }
 
+
+/* MAIN (aka where the magic happens) */
+console.log("Welcome to rock, paper, scissors! This program lets you play rock, paper, scissors (also known as roshambo) against a computer.");
+console.log();
+playing = true;
+
+while (playing) {
+    let userChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+
+    playRound(userChoice, computerChoice);
+    playAgain = prompt("Would you like to play another round? (y/n) ").toLowerCase();
+
+    if (playAgain === 'y') {
+        continue;
+    } else if (playAgain === 'n') {
+        playing = false;
+    } else {
+        console.log("That was an invalid input! I don't want to play with you again :>(")
+        break;
+    }
+}
