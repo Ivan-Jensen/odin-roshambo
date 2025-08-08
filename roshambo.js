@@ -69,16 +69,14 @@ function getHumanChoice() {
     while (!validChoice) {
         userInput = prompt("Please choose rock, paper, or scissors: ").toLowerCase();
 
-        if (userInput != "rock" || userInput != "paper" || userInput != "scissors") {
-            console.log("Error! Please type a valid input");
-        } else {
+        if (userInput === "rock" || userInput === "paper" || userInput === "scissors") {
             validChoice = true;
+        } else {
+            console.log("Error! Please type a valid input");
         }
     }
 
     return userInput;
 }
 
-
-/* MAIN */
 
