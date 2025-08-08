@@ -20,7 +20,11 @@
 let humanScore = 0;
 let computerScore = 0;
 let round = 0;
-
+const winMap = {
+    "rock": "scissors",
+    "paper": "rock",
+    "scissors": "paper"
+};
 
 /* 
  * getComputerChoice
@@ -86,4 +90,30 @@ function getHumanChoice() {
 }
 
 
+function playRound(humanChoice, computerChoice) {
+    round += 1;
+    console.log(`Round: ${round}`);
+    console.log();
+
+    if (winMap.get(humanChoice) === computerChoice) {
+        console.log(`You win :) ${humanChoice} beats ${computerChoice}!`);
+        humanScore += 1;
+    }
+
+    else if (winMap.get(computerChoice) === humanChoice) {
+        console.log(`You lose :( ${computerChoice} beats ${humanChoice} !`);
+        computerScore += 1;
+    }
+
+    // The user and the computer made the same choice
+    else {
+        console.log(`Draw! ${humanChoice} and ${computerChoice} are the same! :0`);
+    }
+
+    console.log();
+    console.log("Current score:");
+    console.log("______________")
+    console.log("User: " + humanScore + '\t' + "Computer: " + computerScore);
+    console.log();
+}
 
