@@ -26,8 +26,12 @@
  *     None
  * 
  * Returns:
- *     "rock":     If the computer chooses rock
- *     "paper":    If the computer chooses paper
- *     "scissors": If the computer chooses scissors
+ *     "rock":     If the computer generates the number 0
+ *     "paper":    If the computer generates the number 1
+ *     "scissors": If the computer generates the number 2
  *
  */
+
+function getComputerChoice() {
+
+}
